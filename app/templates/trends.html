@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Here are some example results of API calls. Remix to your heart's content.</h1>
+    <ul>
+        {% for trend in trends %}
+        <li><a href="/trend/{{ trend["query"] }}">{{ trend["name"] }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
